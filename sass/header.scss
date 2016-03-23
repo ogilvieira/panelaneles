@@ -1,0 +1,17 @@
+.main-header {
+	padding: 20px 0;
+	.brand {
+		display: block;
+		overflow: hidden;
+		text-indent: -999px;
+		background: url(../img/brand.png) no-repeat;
+		width: 173px;
+		height: 76px;
+		background-size: 173px auto;
+		margin: 0 auto;
+		h1,h2 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

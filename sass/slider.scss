@@ -1,0 +1,117 @@
+.slider {
+	width: 100%;
+	.card {
+		display: block;
+		text-decoration: none;
+		color: white;
+		width: 240px;
+		height: 240px;
+		background: #444;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		border-radius: 5px;
+		.image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			&:after, &:before {
+				content: " ";
+				display: block;
+				position: absolute;
+				left: 0;
+				height: 50px;
+				width: 100%;
+				z-index: 1;
+			}
+			&:before {
+				top: 0;
+				@include linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,.5));				
+			}
+			&:after {
+				bottom: 0;
+				@include linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.5));
+			}
+		}
+		.counter {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: 14px;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: bold;
+			line-height: 16px;
+			display: none;
+		}
+		.btn-ghost {
+			@include appearance(none);
+			display: block;
+			box-shadow: none;
+			background-image: none;
+			background: transparent;
+			box-sizing: border-box;
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			border: 2px solid white;
+			border-radius: 5px;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			padding: 3px 8px;
+			font-family: 'Ubuntu', sans-serif;
+			text-transform: uppercase;
+			font-size: 12px;
+			outline: none;
+		}
+	}
+	.name {
+		text-align: center;
+		margin: 12px 0;
+		width: 100%;
+		font-size: 18px;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: bold;
+	}
+	.btn-pan {
+		@include appearance(none);
+		display: inline-block;
+		color: white;
+		vertical-align: middle;
+		box-shadow: none;
+		background-image: none;
+		background: transparent;
+		box-sizing: border-box;
+		border: 0;
+		border-radius: 5px;
+		padding: 0;
+		margin: 20px auto;
+		text-align: center;
+		padding: 10px 30px;
+		font-family: 'Ubuntu', sans-serif;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 24px;
+		outline: none;		
+		background: #009b3a;
+		&:hover { text-decoration: none; }
+	}
+}
+
+@media screen and (min-width: 400px){
+	.slider .card {
+		width: 350px;
+		height: 350px;
+	}
+	.slider .card .btn-ghost {
+		padding: 8px 15px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
