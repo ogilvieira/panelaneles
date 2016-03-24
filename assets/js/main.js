@@ -110,6 +110,7 @@
 	});
 
 	$(window).load(function(){
+		$('#intro').modal()
 		$('.paneladas-wrap').removeClass('is-loading');
 	});
 
