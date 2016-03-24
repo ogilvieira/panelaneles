@@ -102,7 +102,7 @@
 		setAction();
 	});
 
-	$(document).on('keypress', function(e){
+	$(document).on('keydown', function(e){
 		if( e.which == 32 ){
 			e.preventDefault();
 			setAction();
