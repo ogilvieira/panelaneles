@@ -70,7 +70,7 @@
 
 	var setAction = function(){
 		getPanelada();
-		console.log($('audio'));
+		console.log(booIsRunning);
 		if(!booIsRunning){
 			lowLag.play("boo.mp3");
 			booIsRunning = true;
