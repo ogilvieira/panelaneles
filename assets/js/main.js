@@ -111,9 +111,10 @@
 		}
 		keyd = true;
 	});
+
 	$(document).on('keyup', function(e){
 		keyd = false;
-	};
+	});
 
 	$(window).load(function(){
 		$('#intro').modal()
