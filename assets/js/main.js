@@ -2,7 +2,8 @@
 	lowLag.init({'urlPrefix':'./assets/sound/'});
 	lowLag.load("boo.mp3");
 	lowLag.load("toasty.mp3");
-
+	lowLag.suspend = true;
+	
 	var counter = 0;
 	var counterToasty = 0;
 	var counterTimer = null;
