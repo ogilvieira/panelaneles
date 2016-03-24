@@ -125,7 +125,7 @@
 		});
 	};
 
-	if($('body').hasClass('.panelada')){
+	if($('body').hasClass('panelada')){
 		initPanelada();
 	};
 
