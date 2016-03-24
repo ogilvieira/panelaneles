@@ -1,7 +1,7 @@
 ;(function($){
 	lowLag.init({'urlPrefix':'./assets/sound/'});
 	lowLag.load("boo.wav");
-	lowLag.load("toasty.mp3");
+	lowLag.load("toasty.wav");
 	lowLag.suspend = true;
 
 	var counter = 0;
@@ -9,7 +9,7 @@
 	var counterTimer = null;
 	var booIsRunning = false;
 	// var boo = new Audio('./assets/sound/boo.wav');
-	// var toasty = new Audio('./assets/sound/toasty.mp3')
+	// var toasty = new Audio('./assets/sound/toasty.wav')
 	var arrPanelada = ['panelada-1.wav', 'panelada-2.wav', 'panelada-3.wav'];
 	var japanese = $('.japanese');
 	var person = $('.person');
@@ -53,7 +53,7 @@
 			person.attr("data-level", 3);
 		}
 		if(counterToasty%60 == 0){
-			lowLag.play("toasty.mp3");
+			lowLag.play("toasty.wav");
 			$('.japanese').addClass('is-active');
 			setTimeout(function(){
 				$('.japanese').removeClass('is-active');
