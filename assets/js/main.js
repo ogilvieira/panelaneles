@@ -26,8 +26,18 @@
 	  }
 	  return num.toString();
 	};
+	var paneladaSound = [];
+
+	$.each(arrPanelada, function(index, val){
+		paneladaSound.push(new Audio('./assets/sound/'+val+'.wav'));
+	});
+	
 	var getPanelada = function () {
-	  return arrPanelada[parseInt(Math.random() * (3 - 0) + 0)];
+		var i = parseInt(Math.random() * (3 - 0) + 0);
+		$(paneladaSound[i])[0].pause();
+		$(paneladaSound[i])[0].currentTime = 0;
+		$(paneladaSound[i])[0].play();
+		$(paneladaSound[i])[0].volume = 0.3;
 	};
 
 	var testToasty = function(){
@@ -56,9 +66,7 @@
 	};
 
 	var setAction = function(){
-		var paneladaSound = new Audio('./assets/sound/'+getPanelada()+'.wav');
-		paneladaSound.play();
-		$(paneladaSound)[0].volume = 0.3;
+		getPanelada();
 		boo.play();
 		counter++;
 		counterToasty++;
