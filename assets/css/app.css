@@ -1,0 +1,260 @@
+body {
+  background-color: #002776;
+  color: white; }
+
+.main-header {
+  padding: 20px 0; }
+  .main-header .brand {
+    display: block;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../img/brand.png) no-repeat;
+    width: 173px;
+    height: 76px;
+    background-size: 173px auto;
+    margin: 0 auto;
+    background-position: center; }
+    .main-header .brand h1, .main-header .brand h2 {
+      margin: 0;
+      padding: 0;
+      display: none; }
+    .main-header .brand.small {
+      width: 115px;
+      background-size: 115px auto; }
+  .main-header .counter {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background: #019037;
+    color: #f1d301;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto; }
+    .main-header .counter span {
+      display: block; }
+    .main-header .counter small {
+      font-size: 9px;
+      display: block; }
+    .main-header .counter .btn {
+      background: #002776;
+      color: white;
+      font-size: 9px; }
+    .main-header .counter a {
+      color: white;
+      font-size: 11px; }
+
+.slider {
+  width: 100%; }
+  .slider .card {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 240px;
+    height: 240px;
+    background: #444;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px; }
+    .slider .card .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .slider .card .image:after, .slider .card .image:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 50px;
+        width: 100%;
+        z-index: 1; }
+      .slider .card .image:before {
+        top: 0;
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.5));
+        background-image: linear-gradient(to top,transparent, rgba(0, 0, 0, 0.5)); }
+      .slider .card .image:after {
+        bottom: 0;
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+        background-image: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.5)); }
+    .slider .card .counter {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 14px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: bold;
+      line-height: 16px;
+      display: none; }
+    .slider .card .btn-ghost {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      display: block;
+      box-shadow: none;
+      background-image: none;
+      background: transparent;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      padding: 3px 8px;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      outline: none; }
+  .slider .name {
+    text-align: center;
+    margin: 12px 0;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold; }
+  .slider .btn-pan {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    box-shadow: none;
+    background-image: none;
+    background: transparent;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 30px;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    outline: none;
+    background: #009b3a; }
+    .slider .btn-pan:hover {
+      text-decoration: none; }
+
+@media screen and (min-width: 400px) {
+  .slider .card {
+    width: 350px;
+    height: 350px; }
+
+  .slider .card .btn-ghost {
+    padding: 8px 15px;
+    bottom: 20px;
+    right: 20px; } }
+.modal {
+  color: #444; }
+  .modal blockquote {
+    font-size: 14px; }
+
+.paneladas-wrap {
+  display: block;
+  width: 100%;
+  height: calc(100% - 116px);
+  min-height: 405px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 116px;
+  overflow: hidden;
+  min-height: 360px; }
+  .paneladas-wrap.is-loading {
+    background: url(../img/loader.gif) no-repeat center center; }
+    .paneladas-wrap.is-loading * {
+      display: none; }
+  .paneladas-wrap .btn-batepanelada {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    background-color: #009b3a;
+    z-index: 6; }
+  .paneladas-wrap .japanese {
+    position: absolute;
+    bottom: 60px;
+    z-index: 5;
+    background: url(../img/japanese.png) no-repeat;
+    width: 148px;
+    height: 290px;
+    background-size: 148px 290px;
+    right: -148px;
+    -webkit-transition: 0.1s all linear;
+    -moz-transition: 0.1s all linear;
+    transition: 0.1s all linear; }
+    .paneladas-wrap .japanese.is-active {
+      right: 0; }
+  .paneladas-wrap .person {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    margin-top: -210px;
+    margin-left: -150px;
+    z-index: 1;
+    background-size: auto 300px;
+    background-repeat: no-repeat;
+    background-position: -600px bottom; }
+    .paneladas-wrap .person[data-level='1'] {
+      background-position: -600px bottom; }
+    .paneladas-wrap .person[data-level='2'] {
+      background-position: -300px bottom; }
+    .paneladas-wrap .person[data-level='3'] {
+      background-position: 0 bottom; }
+    .paneladas-wrap .person.lula {
+      background-image: url(../img/person/sprite-lula.png); }
+
+@media screen and (min-width: 720px) {
+  .paneladas-wrap {
+    min-height: 660px; }
+
+  .paneladas-wrap .person {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -360px;
+    background-size: auto 600px; }
+    .paneladas-wrap .person[data-level='1'] {
+      background-position: -1200px bottom; }
+    .paneladas-wrap .person[data-level='2'] {
+      background-position: -600px bottom; }
+    .paneladas-wrap .person[data-level='3'] {
+      background-position: 0 bottom; }
+
+  .paneladas-wrap .japanese {
+    width: 297px;
+    height: 581px;
+    background-size: 297px 581px;
+    right: -297px; }
+    .paneladas-wrap .japanese.is-active {
+      right: 0; } }
+
+/*# sourceMappingURL=app.css.map */
