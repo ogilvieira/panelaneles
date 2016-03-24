@@ -1,4 +1,6 @@
 ;(function($){
+	lowLag.init({'urlPrefix':'./assets/sound/'});
+	
 	var counter = 0;
 	var counterToasty = 0;
 	var counterTimer = null;
@@ -9,7 +11,7 @@
 	var person = $('.person');
 	var counterDiv = $('.counter');
 
-	$(boo)[0].volume = 0.2;
+	// $(boo)[0].volume = 0.2;
 	function nFormatter(num, digits) {
 	  var si = [
 	    { value: 1E18, symbol: "E" },
@@ -29,15 +31,17 @@
 	var paneladaSound = [];
 
 	$.each(arrPanelada, function(index, val){
-		paneladaSound.push(new Audio('./assets/sound/'+val+'.wav'));
+		lowLag.load(val+".wav");
 	});
 	
 	var getPanelada = function () {
-		var i = parseInt(Math.random() * (3 - 0) + 0);
-		$(paneladaSound[i])[0].pause();
-		$(paneladaSound[i])[0].currentTime = 0;
-		$(paneladaSound[i])[0].play();
-		$(paneladaSound[i])[0].volume = 0.3;
+		var i = parseInt(Math.random() * (2 - 0) + 0);
+		console.log(i);
+		lowLag.play(paneladaSound[i]+".wav");
+		// $(paneladaSound[i])[0].pause();
+		// $(paneladaSound[i])[0].currentTime = 0;
+		// $(paneladaSound[i])[0].play();
+		// $(paneladaSound[i])[0].volume = 0.3;
 	};
 
 	var testToasty = function(){
