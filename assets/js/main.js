@@ -19,6 +19,11 @@
 		var counterDiv = $('.counter');
 
 		// $(boo)[0].volume = 0.2;
+
+		$('counterDiv a').on('click', function(){
+			ga('send', 'event', 'Share Paneladas', 'Botão superior (Paneladas)', 'Lula');
+		});
+
 		function nFormatter(num, digits) {
 		  var si = [
 		    { value: 1E18, symbol: "E" },
@@ -102,6 +107,7 @@
 
 		$('.btn-batepanelada').on('click touchend', function(e){
 			e.preventDefault();
+			ga('send', 'event', 'Panelada', 'Click button', 'Lula');
 			setAction();
 		});
 
@@ -110,6 +116,7 @@
 		$(document).on('keydown', function(e){
 			if( e.which == 32 && !keyd ){
 				e.preventDefault();
+				ga('send', 'event', 'Panelada', 'Space Button', 'Lula');
 				setAction();
 			}
 			keyd = true;
