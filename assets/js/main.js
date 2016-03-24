@@ -1,6 +1,6 @@
 ;(function($){
 	lowLag.init({'urlPrefix':'./assets/sound/'});
-	lowLag.load("boo.wav");
+	lowLag.load("boo.mp3");
 	lowLag.load("toasty.mp3");
 	lowLag.suspend = true;
 
@@ -71,7 +71,7 @@
 		getPanelada();
 		console.log(booIsRunning);
 		if(!booIsRunning){
-			lowLag.play("boo.wav");
+			lowLag.play("boo.mp3");
 			booIsRunning = true;
 			setTimeout(function(){
 				booIsRunning = false;
