@@ -98,7 +98,7 @@
 	};
 
 
-	$('.btn-batepanelada').on('click', function(e){
+	$('.btn-batepanelada').on('click touchend', function(e){
 		e.preventDefault();
 		setAction();
 	});
