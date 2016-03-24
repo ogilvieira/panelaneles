@@ -38,7 +38,7 @@
 	});
 	
 	var getPanelada = function () {
-		var i = parseInt(Math.random() * (2 - 0) + 0);
+		var i = parseInt(Math.random() * (3 - 0) + 0);
 		console.log(arrPanelada[i]);
 		lowLag.play(arrPanelada[i]);
 	};
