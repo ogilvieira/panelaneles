@@ -7,6 +7,7 @@
 	var counter = 0;
 	var counterToasty = 0;
 	var counterTimer = null;
+	var booIsRunning = false;
 	// var boo = new Audio('./assets/sound/boo.mp3');
 	// var toasty = new Audio('./assets/sound/toasty.mp3')
 	var arrPanelada = ['panelada-1.wav', 'panelada-2.wav', 'panelada-3.wav'];
@@ -70,9 +71,13 @@
 	var setAction = function(){
 		getPanelada();
 		console.log($('audio'));
-		// if(!$('audio[src=./assets/sound/boo.mp3]')){
+		if(!booIsRunning){
 			lowLag.play("boo.mp3");
-		// };
+			booIsRunning = true;
+			setTimeout(function(){
+				booIsRunning = false;
+			}, 13.271269841269842);
+		};
 
 		counter++;
 		counterToasty++;
