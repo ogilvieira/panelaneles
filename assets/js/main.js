@@ -76,7 +76,7 @@
 			booIsRunning = true;
 			setTimeout(function(){
 				booIsRunning = false;
-			}, 13.271269841269842);
+			}, 13272);
 		};
 
 		counter++;
