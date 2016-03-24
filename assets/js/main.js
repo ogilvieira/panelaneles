@@ -1,12 +1,14 @@
 ;(function($){
 	lowLag.init({'urlPrefix':'./assets/sound/'});
-	
+	lowLag.load("boo.mp3");
+	lowLag.load("toasty.mp3");
+
 	var counter = 0;
 	var counterToasty = 0;
 	var counterTimer = null;
-	var boo = new Audio('./assets/sound/boo.mp3');
-	var toasty = new Audio('./assets/sound/toasty.mp3')
-	var arrPanelada = ['panelada-1', 'panelada-2', 'panelada-3'];
+	// var boo = new Audio('./assets/sound/boo.mp3');
+	// var toasty = new Audio('./assets/sound/toasty.mp3')
+	var arrPanelada = ['panelada-1.wav', 'panelada-2.wav', 'panelada-3.wav'];
 	var japanese = $('.japanese');
 	var person = $('.person');
 	var counterDiv = $('.counter');
@@ -28,20 +30,14 @@
 	  }
 	  return num.toString();
 	};
-	var paneladaSound = [];
 
 	$.each(arrPanelada, function(index, val){
-		lowLag.load(val+".wav");
+		lowLag.load(val);
 	});
 	
 	var getPanelada = function () {
 		var i = parseInt(Math.random() * (2 - 0) + 0);
-		console.log(i);
-		lowLag.play(paneladaSound[i]+".wav");
-		// $(paneladaSound[i])[0].pause();
-		// $(paneladaSound[i])[0].currentTime = 0;
-		// $(paneladaSound[i])[0].play();
-		// $(paneladaSound[i])[0].volume = 0.3;
+		lowLag.play(arrPanelada[i]);
 	};
 
 	var testToasty = function(){
@@ -55,7 +51,7 @@
 			person.attr("data-level", 3);
 		}
 		if(counterToasty%60 == 0){
-			toasty.play();
+			lowLag.play("toasty.mp3");
 			$('.japanese').addClass('is-active');
 			setTimeout(function(){
 				$('.japanese').removeClass('is-active');
@@ -71,7 +67,7 @@
 
 	var setAction = function(){
 		getPanelada();
-		boo.play();
+		lowLag.play("boo.mp3");
 		counter++;
 		counterToasty++;
 		testToasty();
@@ -85,6 +81,7 @@
 		counterTimer = setTimeout(function(){
 			counterToasty = 0;
 			$(boo)[0].pause();
+			lowLag.load(val);
 			person.attr("data-level", 1);
 		}, 400);
 	};
