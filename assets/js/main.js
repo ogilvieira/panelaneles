@@ -1,6 +1,6 @@
 ;(function($){
 	lowLag.init({'urlPrefix':'./assets/sound/'});
-	lowLag.load("boo.mp3");
+	lowLag.load("boo.wav");
 	lowLag.load("toasty.mp3");
 	lowLag.suspend = true;
 
@@ -39,7 +39,6 @@
 	
 	var getPanelada = function () {
 		var i = parseInt(Math.random() * (3 - 0) + 0);
-		console.log(arrPanelada[i]);
 		lowLag.play(arrPanelada[i]);
 	};
 
