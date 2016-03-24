@@ -3,7 +3,7 @@
 	lowLag.load("boo.mp3");
 	lowLag.load("toasty.mp3");
 	lowLag.suspend = true;
-	
+
 	var counter = 0;
 	var counterToasty = 0;
 	var counterTimer = null;
@@ -69,7 +69,11 @@
 
 	var setAction = function(){
 		getPanelada();
-		lowLag.play("boo.mp3");
+		console.log($('audio[src=./assets/sound/boo.mp3]'));
+		if(!$('audio[src=./assets/sound/boo.mp3]')){
+			lowLag.play("boo.mp3");
+		};
+
 		counter++;
 		counterToasty++;
 		testToasty();
