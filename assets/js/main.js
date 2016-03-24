@@ -71,7 +71,7 @@
 		getPanelada();
 		console.log(booIsRunning);
 		if(!booIsRunning){
-			lowLag.play("boo.mp3");
+			lowLag.play("boo.wav");
 			booIsRunning = true;
 			setTimeout(function(){
 				booIsRunning = false;
