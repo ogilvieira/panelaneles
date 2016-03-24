@@ -102,12 +102,18 @@
 		setAction();
 	});
 
+	var keyd = false;
+
 	$(document).on('keydown', function(e){
-		if( e.which == 32 ){
+		if( e.which == 32 && !keyd ){
 			e.preventDefault();
 			setAction();
 		}
+		keyd = true;
 	});
+	$(document).on('keyup', function(e){
+		keyd = false;
+	};
 
 	$(window).load(function(){
 		$('#intro').modal()
