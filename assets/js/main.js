@@ -64,7 +64,7 @@
 	var setShareLink = function(){
 		counterDiv.find('a').show();
 		var message = encodeURIComponent("Acabei de panelar "+counter+" vezes contra o Lula e a favor do Brasil!");
-		counterDiv.find('a').attr("href", "https://www.facebook.com/sharer/sharer.php?title="+message+"&u=http%3A//ogilvieira.github.io/panelaneles");
+		counterDiv.find('a').attr("href", "https://www.facebook.com/sharer/sharer.php?title="+message+"&u=http%3A//ogilvieira.github.io/panelaneles/");
 	};
 
 	var setAction = function(){
