@@ -44,14 +44,14 @@
 
 	var testToasty = function(){
 		if(counterToasty > 0 && counterToasty < 20){
-			person.attr("data-level", 1);
+			person.attr("data-level", 2);
 		};
 		if(counterToasty > 20 && counterToasty < 40){
-			person.attr("data-level", 2);
-		}
-		if(counterToasty > 40 && counterToasty < 60){
 			person.attr("data-level", 3);
 		}
+		// if(counterToasty > 40 && counterToasty < 60){
+		// 	person.attr("data-level", 3);
+		// }
 		if(counterToasty%60 == 0){
 			lowLag.play("toasty.wav");
 			$('.japanese').addClass('is-active');
