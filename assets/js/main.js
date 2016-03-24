@@ -37,6 +37,7 @@
 	
 	var getPanelada = function () {
 		var i = parseInt(Math.random() * (2 - 0) + 0);
+		console.log(arrPanelada[i]);
 		lowLag.play(arrPanelada[i]);
 	};
 
@@ -80,8 +81,8 @@
 		if(counterTimer){ clearTimeout(counterTimer)};
 		counterTimer = setTimeout(function(){
 			counterToasty = 0;
-			$(boo)[0].pause();
-			lowLag.load(val);
+			// $(boo)[0].pause();
+			// lowLag.load(val);
 			person.attr("data-level", 1);
 		}, 400);
 	};
