@@ -69,10 +69,10 @@
 
 	var setAction = function(){
 		getPanelada();
-		console.log($('audio[src=./assets/sound/boo.mp3]'));
-		if(!$('audio[src=./assets/sound/boo.mp3]')){
+		console.log($('audio'));
+		// if(!$('audio[src=./assets/sound/boo.mp3]')){
 			lowLag.play("boo.mp3");
-		};
+		// };
 
 		counter++;
 		counterToasty++;
