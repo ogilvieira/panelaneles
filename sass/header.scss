@@ -9,9 +9,42 @@
 		height: 76px;
 		background-size: 173px auto;
 		margin: 0 auto;
+		background-position: center;
 		h1,h2 {
 			margin: 0;
 			padding: 0;
+			display: none;
+		}
+		&.small {
+			width: 115px;
+			background-size: 115px auto;
 		}
 	}
+	.counter {
+		display: block;
+		padding: 10px;
+		border-radius: 5px;
+		background: #019037;
+		color: #f1d301;
+		text-transform: uppercase;
+		text-align: center;
+		box-sizing: border-box;
+		margin: 0 auto;
+		span { 
+			display: block; 
+		}
+		small {
+			font-size: 9px;
+			display: block;
+		}
+		.btn {
+			background: #002776;
+			color: white;
+			font-size: 9px;
+		}
+		a {
+			color: white;
+			font-size: 11px;
+		}
+	}	
 }
